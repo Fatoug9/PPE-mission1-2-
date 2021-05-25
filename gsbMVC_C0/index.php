@@ -13,17 +13,11 @@ switch($uc){
 	case 'connexion':{
 		include("controleurs/c_connexion.php");break;
 	}
-	case 'validerFrais' :{
-		include("controleurs/c_etatFrais.php");break;
-	}
 	case 'etatFrais' :{
 		include("controleurs/c_etatFrais.php");break; 
 	}
-	case 'supprimerFrais' :{
-		include("controleurs/c_etatFrais.php");break; 
-	}
-	case 'validationFrais' :{
-		include("controleurs/c_etatFrais.php");break; 
+	case 'suivreFrais' :{
+	    include("controleurs/c_SuivreFrais.php");break;
 	}
 }
 include("vues/v_pied.php") ;

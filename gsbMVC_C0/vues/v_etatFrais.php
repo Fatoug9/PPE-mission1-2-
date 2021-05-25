@@ -30,7 +30,7 @@
 		 <?php
           }
 		?>
-    <th><a href="index.php?uc=validerFrais&action='voirEtatFrais'">Actualiser</a></th>
+    <th><a href="index.php?uc=etatFrais&action=actualiser" role="button">Actualiser</a></th>
 		</tr>
     </table>
   	<table class="listeLegere">
@@ -49,7 +49,7 @@
 			$libelle = $unFraisHorsForfait['libelle'];
 			$montant = $unFraisHorsForfait['montant'];
       $idFrais = $unFraisHorsForfait['id'];
-      $mois = $unFraisHorsForfait['mois'];
+      //$mois = $unFraisHorsForfait['mois'];
       
       
 		?>
@@ -57,13 +57,14 @@
                 <td><?php echo $date ?></td>
                 <td><?php echo $libelle ?></td>
                 <td><?php echo $montant ?></td> 
-                <td><a href="index.php?uc=supprimerFrais&action=refusFrais">Refuser</a></td> 
+                <td><a href="index.php?uc=etatFrais&action=refusFrais&idFrais=<?php echo $id ?>" role="button" 
+                        onclick="return confirm('Voulez-vous vraiment supprimer ce frais?');">Refuser</a></td> 
              </tr>
         <?php 
           }
 		?>
     </table>
-    <a href="index.php?uc=validationFrais&action=validerFrais&mois=<?php echo $mois ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Valider</a>
+    <a href="index.php?uc=etatFrais&action=validerFrais" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Valider</a>
 
   </div>
   </div>
